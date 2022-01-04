@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Links</title>
+</head>
+<body>
+    <h1>Links for Online School</h1>
+    <!-- <h3>Today is the </h3> -->
+    <button class="btn btn-secondary curclass">Your class: </button>
+
+    <div>
+        <button class="btn btn-secondary"><a href="https://meet.google.com/bbe-vgte-yih" target="blank">Music</a></button>
+    </div>
+    
+    <div>
+        <button class="btn btn-secondary"><a href="https://meet.google.com/wqu-qdpp-gxi" target="blank">PE</a></button>
+    </div>
+
+    <div>
+        <button class="btn btn-secondary"><a href="" target="blank">Math</a></button>
+    </div>
+
+    <div>
+        <button class="btn btn-secondary"><a href="" target="blank">Science</a></button>
+    </div>
+
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<style>
+button{
+    width: 70px;
+
+
+}
+
+h1{text-align:center;}
+    div{
+        margin:20px 0;
+        text-align:center;
+    }
+    body{
+        width:60%;
+        margin:auto;
+    }
+    .curclass{
+        width:260px;
+        display:block;
+        margin:auto;
+        text-align:center;
+    }
+</style>
+
+<script>
+var today = new Date(); 
+var hour = today.getHours()%12;
+var minute = today.getMinutes();
+var time = hour + minute/60 + "";
+var day = today.getDate();
+
+let period;
+let currentClass=document.querySelector(".curclass");
+let dateBox = document.querySelector("h3");
+// dateBox.innerHTML += today.getMonth()+1 + " month and the " + day +" day";
+
+let list = [
+    {
+        p1: {
+            d4: "You Have no school today!",
+            d5:"Music",
+            d6: "Math",
+            d7: "PE",
+            d10: "Math",
+            d11: "Independent Learning Day(May be cancelled)",
+            d12: "Math",
+            d13:"Music",
+            d14: "Math",
+            d17: "PE",
+            d18: "Independent Learning Day",
+
+
+        },
+        p2:{
+            d4: "You Have no school today!",
+            d5:"Science",
+            d6: "Music",
+            d7: "Music",
+            d10: "PE",
+            d11: "Independent Learning Day(May be cancelled)",
+            d12: "Science",
+            d13:"Science",
+            d14: "Music",
+            d17: "Music",
+            d18: "Independent Learning Day",
+
+
+        },
+        p3:{
+            d4: "You Have no school today!",
+            d5:"PE",
+            d6: "Science",
+            d7: "Science",
+            d10: "Music",
+            d11: "Independent Learning Day(May be cancelled)",
+            d12: "Pe",
+            d13:"PE",
+            d14: "Science",
+            d17: "Science",
+            d18: "Independent Learning Day",
+
+
+        },
+        p4:{
+            d4: "You Have no school today!",
+            d5:"Math",
+            d6: "PE",
+            d7: "Math",
+            d10: "Science",
+            d11: "Independent Learning Day(May be cancelled)",
+            d12: "Music",
+            d13:"Math",
+            d14: "PE",
+            d17: "Math",
+            d18: "Independent Learning Day",
+
+
+        }
+    }
+];
+
+if(time>8.3 && time<9.8){
+    period=1;
+}else if(time>10.1 && time<12){
+    period=2;
+}else if(time>12 && time<1.5){
+    period=3;
+}else{
+    period=4;
+}
+
+let p = "p"+period;
+let d = "d"+day;
+console.log(p);
+console.log(list[0]);
+if(period==4){
+    let directory = list[0];
+    let periodObject = directory[p];
+    let nowclass = periodObject[d];
+    console.log(nowclass);
+    currentClass.innerHTML += `${nowclass}`;
+}else if(period==3){
+    let directory = list[0];
+    let periodObject = directory[p];
+    let nowclass = periodObject[d];
+    console.log(nowclass);
+    currentClass.innerHTML += `${nowclass}`;
+}else if(period==2){
+    let directory = list[0];
+    let periodObject = directory[p];
+    let nowclass = periodObject[d];
+    console.log(nowclass);
+    currentClass.innerHTML += `${nowclass}`;
+}else if(period==1){
+    let directory = list[0];
+    let periodObject = directory[p];
+    let nowclass = periodObject[d];
+    console.log(nowclass);
+    currentClass.innerHTML += `${nowclass}`;
+}else{
+    
+}
+
+console.log(period);
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
