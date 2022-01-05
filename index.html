@@ -64,7 +64,7 @@ h1{text-align:center;}
 
 <script>
 var today = new Date(); 
-var hour = today.getHours()%12;
+var hour = today.getHours();
 var minute = today.getMinutes();
 var time = hour + minute/60 + "";
 var day = today.getDate();
@@ -143,9 +143,9 @@ if(time>8 && time<9.8){
     period=1;
 }else if(time>9.8 && time<11.8){
     period=2;
-}else if(time>11.8 && time<1.5){
+}else if(time>11.8 && time<13.5){
     period=3;
-}else if(time>1.5 && time<3){
+}else if(time>13.5 && time<15){
     period=4;
 }else{
     
